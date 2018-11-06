@@ -20,7 +20,7 @@ dataset_Final = pd.read_csv('yellow_tripdata_2018-06.csv')
 lista = [dataset1, dataset2, dataset3, dataset4, dataset5, dataset6]
 dataset_Final = pd.concat(lista)
 
-# Exporting a complete data set 
+# Exporting a complete data set to be use in future and avoid previus steps
 dataset_Final.to_csv('yellow_tripdata_2018.csv')
 
 # Cleaning the labels 
