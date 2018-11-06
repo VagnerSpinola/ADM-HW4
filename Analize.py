@@ -58,9 +58,13 @@ sns.lmplot(x='trip_distance', y="dif", data=dataset_Final)
 pearson_coefficient = stats.pearsonr(dataset_Final['trip_distance'], dataset_Final['dif'])
 print(pearson_coefficient)
 
-
 # Core Research Questions
 # Compute the price per km equation for each trip.
+# Likely, the duration of the trip says something about the city's congestion, especially if combined with the distances. 
+# It might be a good idea to weight the price for mile using the time equation needed to complete the trip. 
+# in my analize we can see in the chart the short trips used more time then the more distant ones i guess that is becouse in the center 
+# we have a big trafic and the taxi doesn t move consuming more time and money.
+
 dataset_Final['price_km'] = dataset_Final['fare_amount'] / dataset_Final['trip_distance']
 
 # Run the mean and the standard deviation of the new variable for each borough. Then plot the distribution. What do you see?
